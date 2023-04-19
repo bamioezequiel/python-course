@@ -6,9 +6,7 @@ def reverse(text):
 
 def is_palindromo(text):
     formatted_text = text.lower().replace(" ", "")
-    #Option 1
     #reverse_text = formatted_text[::-1]
-    #Option 2
     reverse_text = reverse(formatted_text)
 
     return formatted_text == reverse_text
