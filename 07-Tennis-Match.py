@@ -44,7 +44,7 @@ def calculate_scores(scores_games):
         else:
             print(f"{scores[p1]} - {scores[p2]}")   
 
-#calculate_scores(["P1", "P1", "P2", "P2", "P1", "P2", "P1", "P1"])
+calculate_scores(["P1", "P1", "P2", "P2", "P1", "P2", "P1", "P1"])
 #calculate_scores(["P1", "P1", "P2", "P2", "P1", "P2", "P1", "P2", "P2", "P1", "P1", "P1"])
 #calculate_scores(["P1", "P1", "P2", "P2", "P1", "P2", "P1", "P2", "P2", "P2"])
-calculate_scores(["P1", "P1", "P2", "P2", "P1", "P2", "P1", "P1", "P1"])
+#calculate_scores(["P1", "P1", "P2", "P2", "P1", "P2", "P1", "P1", "P1"])
