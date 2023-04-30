@@ -10,7 +10,7 @@
 import string
 import random
 
-def generate_password(length, capital_letter: bool, numbers: bool, symbols: bool):
+def generate_password(length=8, capital_letter=False, numbers=False, symbols=False):
     letters_lowercase =  list(string.ascii_lowercase)
     letters_uppercase =  list(string.ascii_uppercase)
     digits = list(string.digits)
@@ -26,10 +26,8 @@ def generate_password(length, capital_letter: bool, numbers: bool, symbols: bool
     if symbols:
         list_total += punctuation 
 
-    while i <= length:
-        index_random = random.randint(0, len(list_total)-1)
-        password += list_total[index_random]
-        i += 1
+    while len(password) < length:
+        password += random.choice(list_total)
 
     return password
 
@@ -40,8 +38,7 @@ while True:
     capital_letter = bool(int(input("Do you want uppercase letters? [1] Yes [0] No: ")))
     numbers = bool(int(input("Do you want numbers? [1] Yes [0] No: ")))
     symbols = bool(int(input("Do you want symbols? [1] Yes [0] No: ")))
-    print(length, capital_letter, numbers, symbols)
-
+ 
     print(generate_password(length, capital_letter, numbers, symbols))
     
     command = input("\nDo you want to generate another? (Y/n): ")
